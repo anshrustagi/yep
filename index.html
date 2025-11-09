@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felicific Calculus: The Game of Utility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-bg: #0a1410;
+        --color-bg-card: #11221c;
+        --color-primary: #34d399;
+        --color-primary-hover: #6ee7b7;
+        --color-text: #e0efea;
+        --color-text-muted: #8fa89f;
+        --color-border: #2a453c;
+      }
+
+      body {
+        font-family: 'Source Sans 3', sans-serif;
+        background-color: var(--color-bg);
+        background-image: radial-gradient(circle at 1px 1px, #16a34a1a 1px, transparent 0);
+        background-size: 25px 25px;
+        color: var(--color-text);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      .app-bg { background-color: var(--color-bg); }
+      .card-bg { background-color: var(--color-bg-card); }
+      .text-main { color: var(--color-text); }
+      .text-muted { color: var(--color-text-muted); }
+      .primary-text { color: var(--color-primary); }
+      .primary-bg { background-color: var(--color-primary); }
+      .primary-bg-hover:hover { background-color: var(--color-primary-hover); }
+      .primary-border { border-color: var(--color-primary); }
+      .border-color { border-color: var(--color-border); }
+      
+      .selection-primary::selection {
+        background-color: var(--color-primary);
+        color: #000;
+      }
+
+       /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 40px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.5s ease-in-out forwards;
+      }
+       @keyframes subtle-glow {
+        0%, 100% { box-shadow: 0 0 10px -5px var(--color-primary); }
+        50% { box-shadow: 0 0 20px 0px var(--color-primary); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
